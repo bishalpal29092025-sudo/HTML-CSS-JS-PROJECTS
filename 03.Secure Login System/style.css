@@ -1,0 +1,118 @@
+/* 🌈 Global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌌 Page background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* 📦 Login Card */
+.body {
+  background: #ffffff;
+  width: 340px;
+  padding: 35px 30px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeSlide 0.8s ease-out;
+}
+
+/* 🧩 Card animation */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔐 Heading */
+.body h2 {
+  margin-bottom: 25px;
+  color: #333;
+  letter-spacing: 0.5px;
+}
+
+/* 🧾 Inputs */
+input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.8px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* ✨ Input focus animation */
+input:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.4);
+  transform: scale(1.02);
+}
+
+/* 🚀 Button */
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 🔥 Button hover */
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(118, 75, 162, 0.4);
+}
+
+/* 👆 Button click */
+button:active {
+  transform: scale(0.97);
+}
+
+/* 📢 Message text */
+#message {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  animation: pop 0.4s ease;
+}
+
+/* 🎉 Message animation */
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ✅ Success & ❌ Error colors (optional JS use) */
+.success {
+  color: #2ecc71;
+}
+
+.error {
+  color: #e74c3c;
+}
