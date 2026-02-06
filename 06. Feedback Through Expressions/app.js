@@ -1,0 +1,30 @@
+const ratings = document.querySelectorAll(".rating");
+const sendButton = document.querySelector("#send");
+const mainContainer = document.querySelector("#main");
+const ratingsContainer = document.querySelector(".ratings-container");
+
+ratingsContainer.addEventListener("click", (e) => {
+  if (e.target.parentNode.classList.contains("rating")) {
+    console.log(e.target.classList.contains("rating"));
+    removeActive();
+    e.target.parentNode.classList.add("active");
+    selectedRating = e.target.nextElementSibling.innerHTML;
+  }
+});
+
+sendButton.addEventListener("click", () => [
+  (mainContainer.innerHTML = `
+    <p class="heart">💖</p>
+    <strong>Thank You! </strong>
+    <br>
+    <strong>Feedback: ${selectedRating} </strong>
+    `),
+]);
+
+
+function removeActive() {
+  for (let i = 0; i < ratings.length; i++) {
+    ratings[i].classList.remove("active");
+  }
+}
+
