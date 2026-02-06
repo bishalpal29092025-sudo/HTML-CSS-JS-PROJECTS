@@ -1,0 +1,139 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #2b2b45, #0f0f1a);
+  display: grid;
+  place-items: center;
+  color: white;
+  transition: background 0.6s ease;
+}
+
+/* Container (glass effect) */
+.container {
+  padding: 3rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Button layout */
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 1.5rem;
+}
+
+/* Button base */
+.button {
+  height: 80px;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  background: transparent;
+  position: relative;
+  isolation: isolate;
+  transition: transform 0.25s ease;
+}
+
+/* Glow effect */
+.button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  filter: blur(18px);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: -1;
+}
+
+.button:hover {
+  transform: translateY(-6px) scale(1.05);
+}
+
+.button:hover::before {
+  opacity: 1;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Button colors */
+.purple {
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+}
+.purple::before { background: #a855f7; }
+
+.blue {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+}
+.blue::before { background: #38bdf8; }
+
+.red {
+  background: linear-gradient(135deg, #fb7185, #be123c);
+}
+.red::before { background: #fb7185; }
+
+.yellow {
+  background: linear-gradient(135deg, #fde047, #f59e0b);
+}
+.yellow::before { background: #fde047; }
+
+.green {
+  background: linear-gradient(135deg, #4ade80, #15803d);
+}
+.green::before { background: #4ade80; }
+
+.teal {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+.teal::before { background: #14b8a6; }
+
+/* Background changes */
+body.purple {
+  background: radial-gradient(circle at top, #a855f7, #3b0764);
+}
+
+body.blue {
+  background: radial-gradient(circle at top, #38bdf8, #1e3a8a);
+}
+
+body.red {
+  background: radial-gradient(circle at top, #fb7185, #7f1d1d);
+}
+
+body.yellow {
+  background: radial-gradient(circle at top, #fde047, #a16207);
+}
+
+body.green {
+  background: radial-gradient(circle at top, #4ade80, #14532d);
+}
+
+body.teal {
+  background: radial-gradient(circle at top, #2dd4bf, #134e4a);
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
