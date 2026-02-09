@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: #fdf6ec; /* cream white */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#insert {
+  text-align: center;
+}
+
+.key {
+  background: #ffffff;
+  color: #333;
+  padding: 25px 40px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1e6d8;
+}
+
+/* Optional subtle hover effect */
+.key:hover {
+  transform: translateY(-2px);
+  transition: 0.3s ease;
+}
