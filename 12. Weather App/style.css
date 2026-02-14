@@ -1,0 +1,118 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  overflow: hidden;
+}
+
+.container {
+  width: 380px;
+  padding: 40px 30px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: #0f172a;   
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: #1e3a8a;  
+}
+
+/* Search Section */
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding-left: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#searchBtn {
+  padding: 12px 22px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  background: #ffffff;
+  color: #007bff;
+  transition: 0.3s ease;
+}
+
+#searchBtn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Weather Info */
+.weather-card h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.weather-card img {
+  width: 90px;
+  margin: 10px 0;
+}
+
+.weather-card p {
+  font-size: 16px;
+  margin: 8px 0;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* Error message */
+.error {
+  margin-top: 10px;
+  color: #ff4d4d;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .container {
+    width: 90%;
+    padding: 30px 20px;
+  }
+}
