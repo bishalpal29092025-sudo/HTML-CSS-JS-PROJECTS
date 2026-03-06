@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.container {
+  background: aqua;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.options {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.options label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #4facfe;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #3a8dde;
+}
+
+.copyBtn {
+  background: #28a745;
+}
+
+.copyBtn:hover {
+  background: #1f7d35;
+}
+
+#password {
+  margin-top: 15px;
+  width: 93%;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+}
