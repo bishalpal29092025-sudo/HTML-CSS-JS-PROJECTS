@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+
+  min-height: 100vh;
+
+  text-align: center;
+
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2
+  );
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin: 30px 0;
+}
+
+.note-input {
+  display: flex;
+
+  gap: 10px;
+
+  margin-bottom: 30px;
+}
+
+input {
+  padding: 10px;
+
+  width: 250px;
+
+  border-radius: 6px;
+
+  border: none;
+}
+
+button {
+  padding: 10px 15px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  background: white;
+  color: #333;
+}
+
+.notes-container {
+  width: 80%;
+
+  max-width: 600px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.note {
+  background: white;
+
+  color: black;
+
+  padding: 15px;
+
+  border-radius: 8px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
