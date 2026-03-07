@@ -1,0 +1,36 @@
+body {
+  font-family: Arial;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  text-align: center;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+#time {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 5px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: white;
+  color: #333;
+
+  cursor: pointer;
+}
