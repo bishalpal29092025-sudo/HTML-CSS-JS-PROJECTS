@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solana Balance Checker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="header">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Live on-chain
+        </div>
+        <h1>Solana<br /><span>Balance</span> Checker</h1>
+        <p class="subtitle">Query any wallet address in real-time</p>
+      </div>
+
+      <label class="input-label" for="wallet">Wallet Address</label>
+      <div class="input-group">
+        <input
+          id="wallet"
+          type="text"
+          placeholder="Enter a Solana public key…"
+          autocomplete="off"
+          spellcheck="false"
+        />
+      </div>
+
+      <div class="network-row">
+        <button class="net-btn active" data-net="devnet">Devnet</button>
+        <button class="net-btn" data-net="mainnet-beta">Mainnet</button>
+        <button class="net-btn" data-net="testnet">Testnet</button>
+      </div>
+
+      <button class="check-btn" id="balanceCheckBtn">Check Balance</button>
+
+      <div class="result-panel" id="resultPanel">
+        <div class="result-inner" id="resultInner">
+          <div class="result-label" id="resultLabel">Balance</div>
+          <div class="result-value" id="resultValue">
+            <div class="loader">
+              <span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="result-sub" id="resultSub"></div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <span class="footer-text">Powered by Solana Web3.js</span>
+        <svg class="sol-logo" viewBox="0 0 397 311" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7zm0-164.8C67.1 70.7 70.4 69.3 73.8 69.3h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7zM333.1 3.8C330.7 1.4 327.4 0 323.9 0H6.5C.7 0-2.2 7 1.9 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h317.4c5.8 0 8.7-7 4.6-11.1L333.1 3.8z" fill="#0ff5a0"/>
+        </svg>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
